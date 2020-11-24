@@ -116,14 +116,14 @@ const runTests = async (video, extraOptions) => {
         } 
         await createScreenshots({
           video: newVideoSrc,
-          outputFolder:testFolder
+          outputFolder:testFolder,
           name: newVideo,
           positions: [30, 90, 150, 210, 270, 330, 390],
           extraOptions,
         });
         await createScreenshotsMetadata({
           video: newVideoSrc,
-          outputFolder:testFolder
+          outputFolder:testFolder,
           name: newVideo,
           positions: [30, 90, 150, 210, 270, 330, 390],
           resolutions: [1080],
@@ -228,7 +228,7 @@ clip = core.ffms2.Source(${video})
     const cropOutput = path.join(currentFolder,`Crop preview/Take number - ${cropTries}`)
     await createScreenshots({
       video,
-      outputFolder:cropOutput
+      outputFolder:cropOutput,
       name: "crop",
       positions,
     });
